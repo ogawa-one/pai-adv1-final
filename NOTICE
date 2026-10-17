@@ -1,0 +1,22 @@
+pai-adv1-final
+Copyright 2026 ogawa-one
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes or is derived from software developed by others:
+
+- matsuolab/pai_training (https://github.com/matsuolab/pai_training, commit b4d6b54)
+  scripts/train.py carries the header:
+    Copyright 2024 The HuggingFace Inc. team. All rights reserved.
+    Copyright 2024 Tatsuya Kamijo. All rights reserved.
+    Licensed under the Apache License, Version 2.0
+  - adv1_skill_runner.py: control loop based on scripts/infer.py
+  - adv1_rosbag2lerobot_time.py: subclasses RosbagToLeRobot in scripts/rosbag2lerobot.py
+  - adv1_train_skill.sh: at run time, makes a copy of scripts/train.py with one line replaced
+    (the original file is not modified and is not included in this repository)
+
+- matsuolab/physicalai_teleop (https://github.com/matsuolab/physicalai_teleop, commit 0ef2a00)
+  MIT License (package.xml / setup.py). Used for recording demonstrations; no code is copied.
+  The gripper "open" value -0.5236 in adv1_skill_runner.py is taken from its teleop_keyboard.py.
+
+- LeRobot (https://github.com/huggingface/lerobot), Apache License 2.0. Used as a library (ACTPolicy, LeRobotDataset).
